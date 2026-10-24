@@ -1,0 +1,29 @@
+{
+  "paper": "Nassar, Jafar, Rahhal (2020), Knowledge-Based Systems 187, 104811",
+  "configuration": {
+    "sha256": "4d4b21c5684389ce0706859114c5a08072f74eb0b7ff05df8419b40be9d8fabd",
+    "epochs": 30,
+    "batch_size": 512,
+    "patience": 6,
+    "validation_fraction": 0.01,
+    "k": 10,
+    "relevant": 4.0,
+    "seed": 42,
+    "folds": 5,
+    "skip_baselines": false,
+    "torch": "2.14.1+cpu"
+  },
+  "device": "cpu",
+  "dataset_rows": 40542,
+  "users": 38058,
+  "hotels": 1009,
+  "ranking_protocol": "held-out observed interactions only; top-k per user; relevant if overall_rating >= threshold; macro precision/recall; zero-relevance users contribute zero AP/MRR",
+  "fcp_protocol": "pooled comparable pairs within users, ties excluded",
+  "limitations": [
+    "Paper does not specify K, relevance threshold or exact baseline hyperparameters.",
+    "Some test users/items may be unseen in training. Neural models use unknown-ID embedding; Surprise falls back to algorithm estimates.",
+    "Metrics may differ from paper due to data source, ranking candidate universe, seed and library versions.",
+    "Validation subset is drawn from training fold; stage-2 network trains on ground-truth training criteria.",
+    "Final predictions are clipped to [1,5] for evaluation; the network output layer itself is unclipped ReLU (paper Eq. 4/9)."
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "metrics": {
+    "fold": 4,
+    "model": "Proposed Model",
+    "MAE": 0.7747860030846815,
+    "F1": 0.7707768985946062,
+    "F2": 0.7714299787307218,
+    "FCP": 0.7195121951219512,
+    "MAP": 0.7712176350023007,
+    "MRR": 0.7712385493788431
+  },
+  "criteria": [
+    {
+      "fold": 4,
+      "criterion": "value",
+      "MAE": 0.8676884782596592
+    },
+    {
+      "fold": 4,
+      "criterion": "rooms",
+      "MAE": 0.82922839639101
+    },
+    {
+      "fold": 4,
+      "criterion": "location",
+      "MAE": 0.6473937992486215
+    },
+    {
+      "fold": 4,
+      "criterion": "cleanliness",
+      "MAE": 0.6595134863755829
+    },
+    {
+      "fold": 4,
+      "criterion": "check_in",
+      "MAE": 0.7541737582628281
+    },
+    {
+      "fold": 4,
+      "criterion": "service",
+      "MAE": 0.756770640229379
+    },
+    {
+      "fold": 4,
+      "criterion": "business_service",
+      "MAE": 0.899123796833873
+    }
+  ]
+}
